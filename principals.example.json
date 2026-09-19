@@ -1,0 +1,30 @@
+[
+  {
+    "principal_id": "alice-sales",
+    "display_name": "Alice Rep",
+    "role": "Account Manager",
+    "domain": "sales",
+    "match": {"username": "<alice-entra-upn>"},
+    "connectors": ["salesforce", "outlook", "calendar", "teams"],
+    "connector_modes": {
+      "salesforce": "real",
+      "outlook": "real",
+      "calendar": "real",
+      "teams": "real"
+    }
+  },
+  {
+    "principal_id": "maya-field",
+    "display_name": "Maya Iyer",
+    "role": "Senior Field Service Engineer",
+    "domain": "field_service",
+    "match": {"username": "<maya-entra-upn>"},
+    "connectors": ["c4c", "outlook", "calendar", "teams"],
+    "connector_modes": {
+      "c4c": "mock",
+      "outlook": "mock",
+      "calendar": "mock",
+      "teams": "mock"
+    }
+  }
+]

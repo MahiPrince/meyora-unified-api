@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: meyora-unified-api
+    runtime: python
+    region: singapore
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    autoDeploy: true
+    envVars:
+      - key: SALES_BACKEND_URL
+        value: https://cloudaiapi01.onrender.com
+      - key: FIELD_BACKEND_URL
+        value: https://meyora-field-demo-api.onrender.com
+      - key: GRAPH_ENABLED
+        value: "false"
